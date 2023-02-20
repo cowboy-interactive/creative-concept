@@ -63,7 +63,7 @@ export const Footer = ({ xl, lg, md, sm }) => {
 
       <Bottom>
         <Text xl={"color: #fff; max-width: 1000px; margin: 0px;"}>
-          <a href="https://cowboyinteractive.com" target="_blank">
+          <a href="https://cowboyinteractive.com" target="_blank" rel="noreferrer">
             Developed by Cowboy Interactive
           </a>
         </Text>
