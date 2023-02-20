@@ -37,9 +37,6 @@ const Cont = styled(motion.div)`
   display: flex;
   position: relative;
   box-sizing: border-box;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  background: #333;
   width: 100%;
   overflow: hidden;
 

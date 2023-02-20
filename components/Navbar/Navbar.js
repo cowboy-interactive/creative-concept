@@ -8,6 +8,8 @@ import { Link } from "components/Link/Link";
 import ThemeSwitch from "components/Switch/ThemeSwitch";
 import { Container } from "components/Container/Container";
 import { Button } from "components/Button/Button";
+import { Img } from "components/Img/Img";
+import useScrollTop from "hooks/useScrollTop";
 
 export const Navbar = ({
   xl,
@@ -23,6 +25,8 @@ export const Navbar = ({
   const { theme } = useTheme();
   const [showMenu, setShowMenu] = useState(false);
 
+  const scrollTop = useScrollTop();
+
   return (
     <Cont
       xl={xl}
@@ -34,7 +38,7 @@ export const Navbar = ({
       whileInView={whileInView}
       viewport={viewport}
       transition={transition}
-      background={themes[theme].primary}
+      background={scrollTop === 0 ? "none" : "rgba(0, 0, 0, 0.5)"}
       color={themes[theme].text}
       boxShadow={showMenu ? "0" : "0px 4px 20px rgba(0, 0, 0, 0.1)"}
     >
@@ -43,7 +47,7 @@ export const Navbar = ({
         setShowMenu={setShowMenu}
         xl={"font-size: 20px; font-weight: 500;"}
       >
-        Cowboy UI
+        <img src="/images/logo.svg" width="200px;"/>
       </Link>
       <Container xl={"align-items: center;"}>
         {links.map((item, i) => {
@@ -81,7 +85,9 @@ const Cont = styled(motion.div)`
   box-sizing: border-box;
   backdrop-filter: blur( 20px );
   -webkit-backdrop-filter: blur( 20px );
-  border-bottom: 2px solid ${(props) => props.color}};
+  color: white;
+  transition: 0.3s ease;
+  background: ${({ background }) => background};
   box-shadow: ${({ boxShadow }) => boxShadow};
 
   ${({ xl }) => xl};

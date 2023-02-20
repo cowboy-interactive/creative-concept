@@ -12,8 +12,17 @@ import { H3 } from "components/Text/H3";
 import { Text } from "components/Text/Text";
 import useScrollTop from "hooks/useScrollTop";
 import useWindowSize from "hooks/useWindowSize";
+import styled from "styled-components";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import dynamic from "next/dynamic";
+import { Hero } from "components/Container/Hero";
+import { Plans } from "components/Plans/Plans";
+import { Footer } from "components/Footer/Footer";
+import { Slider } from "components/Slider/Slider";
+import Image from "next/image";
+import { ContactForm } from "components/ContactForm/ContactForm";
+import { Gallery } from "components/Gallery/Gallery";
 const Scene = dynamic(() => import("components/Scene"), { ssr: true });
 
 export default function Home() {
@@ -22,158 +31,88 @@ export default function Home() {
   const [position] = useState({ x: 0, y: 0 });
 
   return (
-    <Column xl="padding-top: 100px;">
-      <Scene
-        windowSize={windowSize}
-        scrollTop={scrollTop}
-        position={position}
-      />
-      <Section>
-        <Column>
-          <H1
-            xl="max-width: 600px;"
-            lg="max-width: 450px;"
-            sm="max-width: 350px;"
-          >
-            Quickly Develop Your Next Project
-          </H1>
-          <Text xl="max-width: 400px;">
-            Easy to use, beautifully designed components and templates to
-            jumpstart your next project
-          </Text>
-          <Container sm="flex-direction: column;">
-            <Button
-              href="https://github.com/cowboy-interactive/cowboy-template/blob/main/README.md"
-              target="_blank"
-            >
-              Browse Components
-            </Button>
-            <Button
-              href="https://github.com/cowboy-interactive/cowboy-template/blob/main/README.md"
-              target="_blank"
-              xl="margin: 0 0 0 20px; background: white;"
-              sm="margin: 20px 0 0 0;"
-            >
-              Get the Template
-            </Button>
-          </Container>
-        </Column>
-      </Section>
+    <>
+      <Hero>
+        <H1 xl="max-width: 600px; text-align: center; margin: 0 0 40px 0;">
+          Digital Marketing Made Simple
+        </H1>
 
-      <Section xl="justify-content: center;" sm="align-items: center;">
-        <Column
-          xl="align-items: center; text-align: center; width: 400px;"
-          xs="align-items: flex-start; text-align: left; width: 100%; "
-        >
-          <H2>A fully customizable Next JS template</H2>
-          <Text>
-            The only template you need. Featuring Next{"\u00A0"}JS, Styled
-            {"\u00A0"}Components and Framer{"\u00A0"}Motion.
-          </Text>
-        </Column>
-      </Section>
+        <Button xl="color: white;">Get a Free Quote</Button>
+      </Hero>
 
-      <Section xl="align-items: center;" xs="align-items: flex-start;">
+      <Section xl="margin: 200px 0 300px 0;" sm="flex-direction: column;">
         <Column
-          xl="max-width: 400px;"
-          sm="align-items: center; text-align: center;"
-          xs="align-items: flex-start; text-align: left;"
+          xl="margin: 0 40px 0 0; width: 50%;"
+          sm="align-items: center; width: 100%; margin: 0 0 60px 0;"
         >
-          <H2>Write responsive CSS from the top level</H2>
-          <Text>
-            Set your breakpoints and use media queries to write vanilla CSS on
-            any component.
-          </Text>
-        </Column>
-        <Img src="/images/screen-1.png" xl="max-width: 500px;" />
-      </Section>
-
-      <Section
-        xl="align-items: center;"
-        sm="flex-direction: column-reverse;"
-        xs="align-items: flex-start;"
-      >
-        <Img src="/images/screen-2.png" xl="max-width: 500px;" />
-        <Column
-          xl="max-width: 400px;"
-          md="width: 100%; align-items: center; text-align: center;"
-          xs="align-items: flex-start; text-align: left;"
-        >
-          <H2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ ease: "easeOut", duration: 2 }}
-          >
-            A simple, easy to use animation library
+          <H2>
+            Digital Marketing, Social Media Managment, Photography, Content
+            Creation
           </H2>
-          <Text
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ ease: "easeOut", duration: 1 }}
-          >
-            Create elegant on-scroll animations, on any component, using Framer
-            Motion.
+          <Text>
+            Since 2016, Mach Media has been helping small businesses establish a
+            larger digital footprint. We live in a world of technology, BE
+            ONLINE! BE PRESENT!! We are a Calgary based digital advertising
+            agency. Our goal is to help small businesses grow their social media
+            presence by managing their digital platforms. We produce results!
           </Text>
+          <Button>Learn More</Button>
+        </Column>
+        <Column xl="width: 50%;" sm="align-items: center; width: 100%;">
+          <Img
+            src="/images/about-1.png"
+            xl={`position: absolute; width: 500px; right: -200px; z-index: 1; top: -100px`}
+            md="position: relative; width: 100%; left: 0; top: 0px; margin: 0 0 20px 0;"
+          />
+          <Img
+            src="/images/about-2.png"
+            xl="position: absolute; width: 500px; left: 0; top: 200px;"
+            md="position: relative; width: 100%; left: 0; top: 0px; margin: 0 0 20px 0;"
+          />
         </Column>
       </Section>
-
-      <Section xl="align-items: center;" xs="align-items: flex-start;">
-        <Column
-          xl="max-width: 350px;"
-          sm="align-items: center; text-align: center;"
-          xs="align-items: flex-start; text-align: left;"
-        >
-          <H2>High performance out of the box</H2>
+      <Section xl="padding: 0 10%; flex-direction: column; align-items: center; text-align: center;">
+        <Column xl="max-width: 600px;">
+          <H2>
+            Digital Marketing, Social Media Managment, Photography, Content
+            Creation
+          </H2>
           <Text>
-            Set your breakpoints and use media queries to write vanilla CSS on
-            any component.
+            Since 2016, Mach Media has been helping small businesses establish a
+            larger digital footprint. We live in a world of technology, BE
+            ONLINE! BE PRESENT!! We are a Calgary based digital advertising
+            agency. Our goal is to help small businesses grow their social media
+            presence by managing their digital platforms. We produce results!
           </Text>
         </Column>
-        <Img src="/images/lighthouse-1.png" xl="max-width: 500px;" />
+
+        <Plans />
+        <Button>Geta Quote</Button>
+      </Section>
+
+      <Section xl="padding: 0 5%; flex-direction: column; align-items: center; text-align: center;">
+        <Column xl="max-width: 600px;">
+          <H2>
+            Digital Marketing, Social Media Managment, Photography, Content
+            Creation
+          </H2>
+          <Text>
+            Since 2016, Mach Media has been helping small businesses establish a
+            larger digital footprint. We live in a world of technology, BE
+            ONLINE! BE PRESENT!! We are a Calgary based digital advertising
+            agency. Our goal is to help small businesses grow their social media
+            presence by managing their digital platforms. We produce results!
+          </Text>
+        </Column>
+        <Gallery />
+
+        <Button xl="margin: 60px 0 0 0;">See More</Button>
       </Section>
 
       <Section>
-        <Column
-          xl="width: 100%; align-items: center; text-align: center;"
-          sm="align-items: flex-start; text-align: left;"
-        >
-          <H2 xl="max-width: 300px;">Familiar and easy to learn</H2>
-          <Text xl="max-width: 300px;">
-            No need to learn complicated class names. Just plain CSS.
-          </Text>
-          <Grid
-            sm="grid-template-columns: 2fr 2fr;"
-            xs="grid-template-columns: 2fr;"
-          >
-            <Card>
-              <H3>Documentation</H3>
-              <Text>See what you can do with our template here.</Text>
-            </Card>
-            <Card>
-              <H3>Image Optimization</H3>
-              <Text>Automatic Image Optimization with instant builds.</Text>
-            </Card>
-            <Card>
-              <H3>Theme Provider</H3>
-              <Text>
-                Easily implement dark mode and different themes for your site.
-              </Text>
-            </Card>
-            <Card>
-              <H3>Tutorials</H3>
-              <Text>Automatic Image Optimization with instant builds.</Text>
-            </Card>
-            <Card>
-              <H3>Components</H3>
-              <Text>Automatic Image Optimization with instant builds.</Text>
-            </Card>
-            <Card>
-              <H3>Templates</H3>
-              <Text>Automatic Image Optimization with instant builds.</Text>
-            </Card>
-          </Grid>
-        </Column>
+        <ContactForm />
       </Section>
-    </Column>
+      <Footer />
+    </>
   );
 }

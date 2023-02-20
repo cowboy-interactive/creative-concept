@@ -74,9 +74,9 @@ const Cont = styled(motion.button)`
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   font-weight: 600;
-  border: 2px solid ${(props) => props.color}};
+  border: none;;
   background: ${(props) => props.backround}};
-  color: ${(props) => props.color}};
+  color: white;
 
   &:hover {
     filter: brightness(110%);

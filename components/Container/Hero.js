@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { sizes } from "utils/variables";
 import { motion } from "framer-motion";
 
-export const Column = ({
+export const Hero = ({
   children,
   xl,
   lg,
@@ -31,10 +31,22 @@ export const Column = ({
   );
 };
 
-const Cont = styled(motion.div)`
+const Cont = styled(motion.section)`
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  position: relative;
+  color: white;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+    url("/images/hero-1.png");
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  min-height: 1000px;
 
   ${({ xl }) => xl};
 
@@ -43,10 +55,12 @@ const Cont = styled(motion.div)`
   }
 
   @media (max-width: ${sizes.md}) {
+    padding: 0 5%;
     ${({ md }) => md};
   }
 
   @media (max-width: ${sizes.sm}) {
+    flex-direction: column;
     ${({ sm }) => sm};
   }
 
