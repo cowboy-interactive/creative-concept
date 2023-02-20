@@ -7,6 +7,7 @@ import { Text } from "../Text/Text";
 import { useTheme } from "../../utils/provider";
 import { ContactCard } from "../ContactCard/ContactCard";
 import { Link } from "../Link/Link";
+import Image from "next/image";
 
 export const Footer = ({ xl, lg, md, sm }) => {
   const { theme } = useTheme();
@@ -23,7 +24,7 @@ export const Footer = ({ xl, lg, md, sm }) => {
       <Content>
         <Column>
           <Link href={"/"} xl={"font-size: 20px; font-weight: 500;"}>
-            <img src="/images/logo.svg" width="200px;" />
+            <Image src="/images/logo.svg" width={200} height={100} />
           </Link>
           <Text xl={"color: #fff; max-width: 500px; margin: 40px 0 60px 0"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis

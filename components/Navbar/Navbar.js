@@ -10,6 +10,7 @@ import { Container } from "components/Container/Container";
 import { Button } from "components/Button/Button";
 import { Img } from "components/Img/Img";
 import useScrollTop from "hooks/useScrollTop";
+import Image from "next/image";
 
 export const Navbar = ({
   xl,
@@ -47,7 +48,7 @@ export const Navbar = ({
         setShowMenu={setShowMenu}
         xl={"font-size: 20px; font-weight: 500;"}
       >
-        <img src="/images/logo.svg" width="200px;"/>
+        <Image src="/images/logo.svg" width={200} height={100} />
       </Link>
       <Container xl={"align-items: center;"}>
         {links.map((item, i) => {
@@ -83,8 +84,8 @@ const Cont = styled(motion.div)`
   top: 0;
   z-index: 3;
   box-sizing: border-box;
-  backdrop-filter: blur( 20px );
-  -webkit-backdrop-filter: blur( 20px );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   color: white;
   transition: 0.3s ease;
   background: ${({ background }) => background};
