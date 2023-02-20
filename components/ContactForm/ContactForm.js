@@ -110,8 +110,7 @@ export const ContactForm = ({
           <H2 xl={"margin: 0 0 20px 0;"}>Get a Free Quote</H2>
           <Text xl={"max-width: 450px; margin: 0 0 40px 0;"}>
             Contact us for a free audit of your current website, or to get
-            started on a new one. We're here to help your business{"\u00A0"}grow
-            {"\u00A0"}online.
+            started on a new one. We're here to help your business grow online.
           </Text>
         </ColumnUI>
 
