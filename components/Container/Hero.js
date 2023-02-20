@@ -38,8 +38,7 @@ const Cont = styled(motion.section)`
   flex-direction: column;
   color: white;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-    url("/images/hero-1.png");
+  background: url("/images/hero-1.png");
 
   background-attachment: fixed;
   background-position: center;
