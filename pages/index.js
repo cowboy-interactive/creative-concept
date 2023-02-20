@@ -13,13 +13,11 @@ import { Text } from "components/Text/Text";
 import useScrollTop from "hooks/useScrollTop";
 import useWindowSize from "hooks/useWindowSize";
 import styled from "styled-components";
-import { motion, useScroll, useTransform } from "framer-motion";
 
 import dynamic from "next/dynamic";
 import { Hero } from "components/Container/Hero";
 import { Plans } from "components/Plans/Plans";
 import { Footer } from "components/Footer/Footer";
-import { Slider } from "components/Slider/Slider";
 import Image from "next/image";
 import { ContactForm } from "components/ContactForm/ContactForm";
 import { Gallery } from "components/Gallery/Gallery";
