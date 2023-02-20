@@ -24,19 +24,19 @@ export const links = [
     list: [
       {
         head: "Hosting Fees Included",
-        icon: <Monitor />,
+        icon: <Monitor alt="icon"/>,
       },
       {
         head: "Web Design & Development",
-        icon: <Layout />,
+        icon: <Layout alt="icon"/>,
       },
       {
         head: "Google Analytics",
-        icon: <Activity />,
+        icon: <Activity alt="icon"/>,
       },
       {
         head: "7 Day Support",
-        icon: <Calendar />,
+        icon: <Calendar alt="icon"/>,
       },
     ],
   },
@@ -55,19 +55,19 @@ export const links = [
     list: [
       {
         head: "Content Management",
-        icon: <Database />,
+        icon: <Database alt="icon"/>,
       },
       {
         head: "Logo Design",
-        icon: <PenTool />,
+        icon: <PenTool alt="icon"/>,
       },
       {
         head: "Custom Graphics",
-        icon: <Image />,
+        icon: <Image alt="icon"/>,
       },
       {
         head: "Ecommerce",
-        icon: <ShoppingBag />,
+        icon: <ShoppingBag alt="icon"/>,
       },
     ],
   },
@@ -86,19 +86,19 @@ export const links = [
     list: [
       {
         head: "Content Management",
-        icon: <Database />,
+        icon: <Database alt="icon"/>,
       },
       {
         head: "Logo Design",
-        icon: <PenTool />,
+        icon: <PenTool alt="icon"/>,
       },
       {
         head: "Custom Graphics",
-        icon: <Image />,
+        icon: <Image alt="icon"/>,
       },
       {
         head: "Ecommerce",
-        icon: <ShoppingBag />,
+        icon: <ShoppingBag alt="icon"/>,
       },
     ],
   },

@@ -24,7 +24,7 @@ export const Footer = ({ xl, lg, md, sm }) => {
       <Content>
         <Column>
           <Link href={"/"} xl={"font-size: 20px; font-weight: 500;"}>
-            <Image src="/images/logo.svg" width={200} height={100} />
+            <Image alt="logo" src="/images/logo.svg" width={200} height={100} />
           </Link>
           <Text xl={"color: #fff; max-width: 500px; margin: 40px 0 60px 0"}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis

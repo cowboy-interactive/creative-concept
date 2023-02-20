@@ -48,7 +48,7 @@ export const Navbar = ({
         setShowMenu={setShowMenu}
         xl={"font-size: 20px; font-weight: 500;"}
       >
-        <Image src="/images/logo.svg" width={200} height={100} />
+        <Image alt="logo" src="/images/logo.svg" width={200} height={100} />
       </Link>
       <Container xl={"align-items: center;"}>
         {links.map((item, i) => {
