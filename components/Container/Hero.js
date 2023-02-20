@@ -40,7 +40,6 @@ const Cont = styled(motion.section)`
 
   background: url("/images/hero-1.png");
 
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
