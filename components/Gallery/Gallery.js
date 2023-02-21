@@ -62,7 +62,7 @@ export const Gallery = ({
     }
   };
 
-  console.log(showImage)
+  console.log(showImage);
 
   return (
     <>
@@ -77,10 +77,7 @@ export const Gallery = ({
           <NavRight background={themes[theme].button} onClick={showNextImage}>
             <ArrowRight color="white" />
           </NavRight>
-          <Img
-            src={showImage.image}
-            alt={showImage.head}
-          />
+          <Img src={showImage.image} alt={showImage.head} />
           <CloseButton color={themes["dark"].primary} onClick={closeOverlay}>
             close
           </CloseButton>
@@ -100,9 +97,7 @@ export const Gallery = ({
               viewport={viewport}
               transition={{ ease: "easeOut", duration: 1, delay: i / 4 }}
             >
-
-                <Img src={item.image} alt={item.head} />
-
+              <Img src={item.image} alt={item.head} />
             </Card>
           );
         })}
@@ -173,7 +168,6 @@ const ImageOverlay = styled.div`
   @media (max-width: ${sizes.sm}) {
     width: 100%;
   }
-
 `;
 
 const NavRight = styled.div`

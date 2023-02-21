@@ -12,21 +12,23 @@ import { H3 } from "components/Text/H3";
 import { Text } from "components/Text/Text";
 import useScrollTop from "hooks/useScrollTop";
 import useWindowSize from "hooks/useWindowSize";
-import styled from "styled-components";
-
 import dynamic from "next/dynamic";
 import { Hero } from "components/Container/Hero";
 import { Plans } from "components/Plans/Plans";
 import { Footer } from "components/Footer/Footer";
-import Image from "next/image";
 import { ContactForm } from "components/ContactForm/ContactForm";
 import { Gallery } from "components/Gallery/Gallery";
+import { Testimonials } from "components/Testimonials/Testimonials";
+import { themes } from "utils/variables";
+import { useTheme } from "utils/provider";
 const Scene = dynamic(() => import("components/Scene"), { ssr: true });
 
 export default function Home() {
   const scrollTop = useScrollTop();
   const windowSize = useWindowSize();
   const [position] = useState({ x: 0, y: 0 });
+
+  const { theme } = useTheme();
 
   return (
     <>
@@ -105,6 +107,27 @@ export default function Home() {
         <Gallery />
 
         <Button xl="margin: 60px 0 0 0;">See More</Button>
+      </Section>
+
+      <Section
+        xl={`padding: 100px 20%; flex-direction: column; align-items: center; text-align: center; background: ${themes[theme].button}`}
+        md="padding: 100px 20%;"
+        sm="padding: 100px 5%;"
+      >
+        <Column xl="max-width: 600px; margin: 0 0 60px 0">
+          <H2 xl="color: white;">
+            Digital Marketing, Social Media Managment, Photography, Content
+            Creation
+          </H2>
+          <Text xl="color: white;">
+            Since 2016, Mach Media has been helping small businesses establish a
+            larger digital footprint. We live in a world of technology, BE
+            ONLINE! BE PRESENT!! We are a Calgary based digital advertising
+            agency. Our goal is to help small businesses grow their social media
+            presence by managing their digital platforms. We produce results!
+          </Text>
+        </Column>
+        <Testimonials />
       </Section>
 
       <Section>
