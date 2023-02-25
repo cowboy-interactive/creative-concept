@@ -5,6 +5,14 @@ export const links = [
   },
   {
     text: "About",
-    url: "/",
+    url: "/about",
+  },
+  {
+    text: "Portfolio",
+    url: "/portfolio",
+  },
+  {
+    text: "Contact",
+    url: "/contact",
   },
 ];

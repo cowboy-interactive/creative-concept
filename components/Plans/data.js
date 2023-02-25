@@ -1,6 +1,8 @@
 import {
   Activity,
   Calendar,
+  CheckCircle,
+  Circle,
   Database,
   Image,
   Layout,
@@ -11,94 +13,95 @@ import {
 
 export const links = [
   {
-    head: "Standard",
+    head: "Basic",
     price: "$499",
-    text: (
-      <span>
-        Our standard 5 page website. <br /> Let us take care of your website,
-        <br />
-        while you focus on the rest.
-      </span>
-    ),
+    text: "",
     url: "/",
     list: [
       {
-        head: "Hosting Fees Included",
-        icon: <Monitor alt="icon"/>,
+        head: "Brand curated marketing strategy",
+        icon: <CheckCircle alt="icon" />,
       },
       {
-        head: "Web Design & Development",
-        icon: <Layout alt="icon"/>,
+        head: "Content Creation (Photography and videography. 2 post/wk)",
+        icon: <CheckCircle alt="icon" />,
       },
       {
-        head: "Google Analytics",
-        icon: <Activity alt="icon"/>,
-      },
-      {
-        head: "7 Day Support",
-        icon: <Calendar alt="icon"/>,
+        head: "One social media platform (i.e. Instagram, Tiktok, etc.)",
+        icon: <CheckCircle alt="icon" />,
       },
     ],
   },
   {
-    head: "Custom",
+    head: "Pro",
     price: "Inquire",
-    text: (
-      <span>
-        Need a custom plan that fits <br />
-        your needs? Contact us to see what <br />
-        we can do for your website.
-      </span>
-    ),
+    text: "",
+    url: "/",
+    list: [
+      {
+        head: "Everything in Basic Package",
+        icon: <CheckCircle alt="icon" />,
+      },
+      {
+        head: "Content Creation (Photography and videography. 3 post/wk)",
+        icon: <CheckCircle alt="icon" />,
+      },
+      {
+        head: "Website creation/design/optimization",
+        icon: <CheckCircle alt="icon" />,
+      },
+      {
+        head: "SEO",
+        icon: <CheckCircle alt="icon" />,
+      },
+      {
+        head: "Promotions (sales) that fit within your budget",
+        icon: <CheckCircle alt="icon" />,
+      },
+      {
+        head: "Analytics (monthly)",
+        icon: <CheckCircle alt="icon" />,
+      },
+    ],
+  },
+  {
+    head: "Pro+",
+    price: "Inquire",
+    text: "",
     style: "fill",
     url: "/",
     list: [
       {
-        head: "Content Management",
-        icon: <Database alt="icon"/>,
+        head: "Everything in Pro Package",
+        icon: <CheckCircle alt="icon" />,
       },
       {
-        head: "Logo Design",
-        icon: <PenTool alt="icon"/>,
+        head: "Content Creation (Photography and videography. 3-4 post/wk)",
+        icon: <CheckCircle alt="icon" />,
       },
       {
-        head: "Custom Graphics",
-        icon: <Image alt="icon"/>,
+        head: "Multiple social media platforms",
+        icon: <CheckCircle alt="icon" />,
       },
       {
-        head: "Ecommerce",
-        icon: <ShoppingBag alt="icon"/>,
+        head: "Events",
+        icon: <CheckCircle alt="icon" />,
+      },
+      {
+        head: "Influencer marketing/ proper outreach",
+        icon: <CheckCircle alt="icon" />,
       },
     ],
   },
   {
     head: "Custom",
     price: "Inquire",
-    text: (
-      <span>
-        Need a custom plan that fits <br />
-        your needs? Contact us to see what <br />
-        we can do for your website.
-      </span>
-    ),
     style: "standard",
     url: "/",
     list: [
       {
-        head: "Content Management",
-        icon: <Database alt="icon"/>,
-      },
-      {
-        head: "Logo Design",
-        icon: <PenTool alt="icon"/>,
-      },
-      {
-        head: "Custom Graphics",
-        icon: <Image alt="icon"/>,
-      },
-      {
-        head: "Ecommerce",
-        icon: <ShoppingBag alt="icon"/>,
+        head: "A personalized package built specifically for you and your business",
+        icon: <CheckCircle alt="icon" />,
       },
     ],
   },

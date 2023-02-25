@@ -34,7 +34,7 @@ export const Text = ({
 
 const Cont = styled(motion.p)`
   margin: 0 0 40px 0;
-  font-weight: ${font.p.xl.weight};
+  font-weight: 450;
   font-size: ${font.p.xl.size};
   line-height: ${font.p.xl.height};
 

@@ -11,6 +11,7 @@ import { Button } from "components/Button/Button";
 import { Img } from "components/Img/Img";
 import useScrollTop from "hooks/useScrollTop";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export const Navbar = ({
   xl,
@@ -27,6 +28,7 @@ export const Navbar = ({
   const [showMenu, setShowMenu] = useState(false);
 
   const scrollTop = useScrollTop();
+  const router = useRouter();
 
   return (
     <Cont
@@ -38,8 +40,12 @@ export const Navbar = ({
       initial={initial}
       whileInView={whileInView}
       viewport={viewport}
-      transition={transition}
-      background={scrollTop === 0 ? "none" : "rgba(0, 0, 0, 0.5)"}
+      transition={router.pathname === "/" ? "0.3s ease" : ""}
+      background={
+        scrollTop === 0 && router.pathname === "/"
+          ? "none"
+          : "rgba(0, 0, 0, 0.5)"
+      }
       color={themes[theme].text}
       boxShadow={showMenu ? "0" : "0px 4px 20px rgba(0, 0, 0, 0.1)"}
     >
@@ -87,7 +93,7 @@ const Cont = styled(motion.div)`
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   color: white;
-  transition: 0.3s ease;
+  transition: ${({ transition }) => transition};
   background: ${({ background }) => background};
   box-shadow: ${({ boxShadow }) => boxShadow};
 

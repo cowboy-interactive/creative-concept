@@ -27,9 +27,7 @@ export const Footer = ({ xl, lg, md, sm }) => {
             <Image alt="logo" src="/images/logo.svg" width={200} height={100} />
           </Link>
           <Text xl={"color: #fff; max-width: 500px; margin: 40px 0 60px 0"}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
-            feugiat pharetra quis imperdiet cursus tristique tincidunt non
-            vitae.
+            Let’s Connect and Build your Brand Together.
           </Text>
 
           <Row>
@@ -63,7 +61,11 @@ export const Footer = ({ xl, lg, md, sm }) => {
 
       <Bottom>
         <Text xl={"color: #fff; max-width: 1000px; margin: 0px;"}>
-          <a href="https://cowboyinteractive.com" target="_blank" rel="noreferrer">
+          <a
+            href="https://cowboyinteractive.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             Developed by Cowboy Interactive
           </a>
         </Text>

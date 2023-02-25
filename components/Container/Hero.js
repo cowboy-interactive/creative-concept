@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { sizes } from "utils/variables";
+import { sizes, themes } from "utils/variables";
 import { motion } from "framer-motion";
+import { useTheme } from "utils/provider";
 
 export const Hero = ({
   children,
@@ -14,6 +15,8 @@ export const Hero = ({
   viewport = {},
   transition = {},
 }) => {
+  const { theme } = useTheme();
+
   return (
     <Cont
       xl={xl}
@@ -25,6 +28,7 @@ export const Hero = ({
       whileInView={whileInView}
       viewport={viewport}
       transition={transition}
+      backgroundImage={"/images/hero-1.png"}
     >
       {children}
     </Cont>
@@ -38,8 +42,8 @@ const Cont = styled(motion.section)`
   flex-direction: column;
   color: white;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-    url("/images/hero-1.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+    url(${({ backgroundImage }) => backgroundImage});
 
   background-position: center;
   background-repeat: no-repeat;

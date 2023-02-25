@@ -21,6 +21,7 @@ import { Gallery } from "components/Gallery/Gallery";
 import { Testimonials } from "components/Testimonials/Testimonials";
 import { themes } from "utils/variables";
 import { useTheme } from "utils/provider";
+import { links } from "components/Gallery/home";
 const Scene = dynamic(() => import("components/Scene"), { ssr: true });
 
 export default function Home() {
@@ -34,79 +35,75 @@ export default function Home() {
     <>
       <Hero>
         <H1 xl="max-width: 600px; text-align: center; margin: 0 0 40px 0;">
-          Digital Marketing Made Simple
+          Digital Marketing
         </H1>
+        <Text xl="font-weight: 500">
+          Let’s Connect and Build your Brand Together.
+        </Text>
 
-        <Button xl="color: white;">Get a Free Quote</Button>
+        <Button xl="color: white;" href="/contact">
+          Get a Free Quote
+        </Button>
       </Hero>
 
       <Section xl="margin: 200px 0 300px 0;" sm="flex-direction: column;">
         <Column
           xl="margin: 0 40px 0 0; width: 50%;"
           sm="align-items: center; width: 100%; margin: 0 0 60px 0;"
+          xs="align-items: flex-start;"
         >
-          <H2>
-            Digital Marketing, Social Media Managment, Photography, Content
-            Creation
-          </H2>
+          <H2>Why Digital marketing?</H2>
           <Text>
-            Since 2016, Mach Media has been helping small businesses establish a
-            larger digital footprint. We live in a world of technology, BE
-            ONLINE! BE PRESENT!! We are a Calgary based digital advertising
-            agency. Our goal is to help small businesses grow their social media
-            presence by managing their digital platforms. We produce results!
+            Digital marketing is essential for any business looking to succeed
+            in today's digital age with the rise of the internet and the
+            proliferation of digital devices. Digital marketing helps increase
+            brand awareness, increase traffic, and increase leads. Digital
+            marketing provides a level of targeting and personalization. We are
+            a Calgary based social media agency and our goal is to help build a
+            brand and share who you are as a business with the world. Let’s go
+            on this journey together!
           </Text>
-          <Button>Learn More</Button>
+          <Button href="/about">Learn More</Button>
         </Column>
         <Column xl="width: 50%;" sm="align-items: center; width: 100%;">
           <Img
-            src="/images/about-1.png"
-            xl={`position: absolute; width: 500px; right: -200px; z-index: 1; top: -100px`}
+            src="/gallery/gallery-9.jpg"
+            xl={`position: absolute; width: 500px; right: -200px; z-index: 1; top: -100px; max-width: 700px;`}
             md="position: relative; width: 100%; left: 0; top: 0px; margin: 0 0 20px 0;"
           />
           <Img
-            src="/images/about-2.png"
-            xl="position: absolute; width: 500px; left: 0; top: 200px;"
+            src="/gallery/gallery-1.jpg"
+            xl="position: absolute; width: 500px; left: 0; top: 200px; max-width: 700px;"
             md="position: relative; width: 100%; left: 0; top: 0px; margin: 0 0 20px 0;"
           />
         </Column>
       </Section>
-      <Section xl="padding: 0 10%; flex-direction: column; align-items: center; text-align: center;">
-        <Column xl="max-width: 600px;">
-          <H2>
-            Digital Marketing, Social Media Managment, Photography, Content
-            Creation
-          </H2>
+
+      <Section xl="padding: 0 20%; flex-direction: column; align-items: center; text-align: center;">
+        <Column xl="max-width: 450px;">
+          <H2 xl="justify-content: center;">Packages</H2>
           <Text>
-            Since 2016, Mach Media has been helping small businesses establish a
-            larger digital footprint. We live in a world of technology, BE
-            ONLINE! BE PRESENT!! We are a Calgary based digital advertising
-            agency. Our goal is to help small businesses grow their social media
-            presence by managing their digital platforms. We produce results!
+            There’s a package for everyone. Choose the right package for you and
+            let’s go on this journey together!
           </Text>
         </Column>
 
         <Plans />
-        <Button>Geta Quote</Button>
+        <Button href="/contact">Get a Free Quote</Button>
       </Section>
 
       <Section xl="padding: 0 5%; flex-direction: column; align-items: center; text-align: center;">
-        <Column xl="max-width: 600px;">
-          <H2>
-            Digital Marketing, Social Media Managment, Photography, Content
-            Creation
-          </H2>
-          <Text>
-            Since 2016, Mach Media has been helping small businesses establish a
-            larger digital footprint. We live in a world of technology, BE
-            ONLINE! BE PRESENT!! We are a Calgary based digital advertising
-            agency. Our goal is to help small businesses grow their social media
-            presence by managing their digital platforms. We produce results!
-          </Text>
-        </Column>
-        <Gallery />
+        <H2>Portofolio</H2>
+        <Text xl="max-width: 400px;">
+          Take a look at some of the work I have done for clients and on my own
+          time over the years
+        </Text>
 
-        <Button xl="margin: 60px 0 0 0;">See More</Button>
+        <Gallery links={links} />
+
+        <Button xl="margin: 60px 0 0 0;" href="/portfolio">
+          See More
+        </Button>
       </Section>
 
       <Section
@@ -114,17 +111,10 @@ export default function Home() {
         md="padding: 100px 20%;"
         sm="padding: 100px 5%;"
       >
-        <Column xl="max-width: 600px; margin: 0 0 60px 0">
-          <H2 xl="color: white;">
-            Digital Marketing, Social Media Managment, Photography, Content
-            Creation
-          </H2>
-          <Text xl="color: white;">
-            Since 2016, Mach Media has been helping small businesses establish a
-            larger digital footprint. We live in a world of technology, BE
-            ONLINE! BE PRESENT!! We are a Calgary based digital advertising
-            agency. Our goal is to help small businesses grow their social media
-            presence by managing their digital platforms. We produce results!
+        <Column xl="margin: 0 0 60px 0; align-items: center;">
+          <H2 xl="color: white;">Testimonials</H2>
+          <Text xl="color: white; max-width: 600px;">
+            Hear what our clients have to say!
           </Text>
         </Column>
         <Testimonials />

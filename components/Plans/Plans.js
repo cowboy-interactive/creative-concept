@@ -24,78 +24,60 @@ export const Plans = ({
       <Grid>
         {links.map((item, i) => {
           return (
-            <motion.div
+            <Card
               key={i}
               initial={initial}
               whileInView={whileInView}
               viewport={viewport}
               transition={{ ease: "linear", duration: 1, delay: i / 4 }}
+              all={all}
+              large={large}
+              medium={medium}
+              small={small}
+              background={
+                item.style === "fill"
+                  ? themes[theme].button
+                  : themes[theme].primary
+              }
+              border={"none"}
             >
-              <Card
-                all={all}
-                large={large}
-                medium={medium}
-                small={small}
-                background={
-                  item.style == "fill"
-                    ? themes[theme].button
-                    : themes[theme].primary
-                }
-                border={
-                  item.style == "outline" ? themes[theme].highlight : "none"
-                }
-                color={item.style == "fill" ? "white" : themes[theme].secondary}
+              <H3
+                xl={`text-align: center; margin: 0 0 20px 0; color: ${
+                  item.style === "fill" ? "white" : themes[theme].secondary
+                }`}
               >
-                <H3
-                  color={themes[theme].highlight}
-                  style={{ margin: "0 0 20px 0" }}
-                >
-                  {item.head}
-                </H3>
-                <Column>
-                  <Text
-                    all={"margin: 0 0 60px 0; width: 100%;"}
-                    xsmall={"width: 90%;"}
-                  >
-                    {item.text}
-                  </Text>
+                {item.head}
+              </H3>
+              <Column>
+                {item.text ? (
+                  <>
+                    <Text xl="margin: 0;"> {item.text}</Text>
+                  </>
+                ) : (
+                  <></>
+                )}
 
-                  <List>
-                    {item.list.map((listItem, key) => {
-                      return (
-                        <ListItem
-                          key={key}
-                          color={
-                            item.style == "fill"
-                              ? "white"
-                              : themes[theme].secondary
-                          }
-                        >
-                          <Icon
-                            color={
-                              item.style == "fill"
-                                ? "white"
-                                : themes[theme].highlight
-                            }
-                          >
-                            {listItem.icon}
-                          </Icon>
-                          <Head
-                            color={
-                              item.style == "fill"
-                                ? "white"
-                                : themes[theme].highlight
-                            }
-                          >
-                            {listItem.head}
-                          </Head>
-                        </ListItem>
-                      );
-                    })}
-                  </List>
-                </Column>
-              </Card>
-            </motion.div>
+                <List>
+                  {item.list.map((listItem, key) => {
+                    return (
+                      <ListItem
+                        key={key}
+                        color={
+                          item.style === "fill"
+                            ? "white"
+                            : themes[theme].secondary
+                        }
+                      >
+                        <Icon color={ item.style === "fill" ? "white" : themes[theme].highlight}>
+                          {listItem.icon}
+                        </Icon>
+                        <Text xl="margin: 0;">{listItem.head}</Text>
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              </Column>
+            </Card>
           );
         })}
       </Grid>
@@ -117,36 +99,38 @@ const Cont = styled.div`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-columns: 2fr;
   grid-gap: 20px;
   width: 100%;
+  justify-items: center;
   margin: 0 0 40px 0;
 
   @media (max-width: ${sizes.sm}) {
     grid-template-columns: 2fr;
-    grid-gap: 60px;
+    grid-gap: 40px;
   }
 `;
 
-const Card = styled.div`
+const Card = styled(motion.div)`
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   border-radius: 15px;
   flex-direction: column;
   transition: 0.2s ease;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-  padding: 60px 0px;
   width: 100%;
+  max-width: 600px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
   background: ${({ background }) => background};
   color: ${({ color }) => color};
   border: 2px solid ${({ border }) => border};
-
   @media (max-width: ${sizes.sm}) {
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
     min-height: 0px;
+    max-width: 500px;
   }
 `;
 
@@ -199,12 +183,9 @@ const List = styled.div`
 `;
 
 const Icon = styled.div`
-  min-width: 50px;
-  min-height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid ${({ color }) => color};
   color: ${({ color }) => color};
   border-radius: 5px;
   transition: 0.2s ease;

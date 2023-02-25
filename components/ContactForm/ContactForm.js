@@ -107,10 +107,10 @@ export const ContactForm = ({
         transition={transition}
       >
         <ColumnUI>
-          <H2 xl={"margin: 0 0 20px 0;"}>Get a Free Quote</H2>
+          <H2 xl={"margin: 0 0 20px 0;"}>Come get a free quote</H2>
           <Text xl={"max-width: 450px; margin: 0 0 40px 0;"}>
-            Contact us for a free audit of your current website, or to get
-            started on a new one. We're here to help your business grow online.
+            Contact us for a free analysis of your brand and social media. Let’s
+            connect and build your business together
           </Text>
         </ColumnUI>
 

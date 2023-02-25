@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { links } from "./data";
 import { sizes, themes } from "../../utils/variables";
 import Image from "next/image";
 import { useState } from "react";
@@ -18,6 +17,7 @@ export const Gallery = ({
   whileInView = { opacity: 1 },
   viewport = { once: true },
   transition = { ease: "easeOut", duration: 1 },
+  links={links}
 }) => {
   const [overlay, setOverlay] = useState(false);
   const [showImage, setShowImage] = useState({

@@ -1,4 +1,13 @@
-import { Calendar, Facebook, Instagram, Linkedin, Mail, Map, Paperclip, Tool } from "react-feather";
+import {
+  Calendar,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  Map,
+  Paperclip,
+  Tool,
+} from "react-feather";
 
 export const links = [
   {
@@ -10,28 +19,20 @@ export const links = [
     image: "/interior-2.jpg",
   },
   {
-    head: "About Us",
+    head: "About",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
+    url: "/about",
     icon: <Paperclip />,
     target: "",
     image: "/interior-3.jpg",
   },
   {
-    head: "Services",
+    head: "Portfolio",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
     url: "/",
     icon: <Tool />,
     target: "_blank",
     image: "/interior-4.jpg",
-  },
-  {
-    head: "Our Work",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
-    icon: <Calendar />,
-    target: "",
-    image: "/interior-5.jpg",
   },
   {
     head: "Contact Us",
@@ -68,5 +69,4 @@ export const social = [
     target: "_blank",
     image: "/interior-4.jpg",
   },
-
 ];

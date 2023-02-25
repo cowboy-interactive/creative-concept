@@ -28,7 +28,7 @@ export const font = {
     weight: "700",
   },
   p: {
-    xl: { size: "18px", weight: "450px", height: "1.65" },
+    xl: { size: "18px", weight: "500px", height: "1.65" },
     lg: { size: "18px", weight: "450px", height: "1.65" },
     md: { size: "18px", weight: "450px", height: "1.65" },
     sm: { size: "18px", weight: "450px", height: "1.65" },
