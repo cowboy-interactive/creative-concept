@@ -44,10 +44,10 @@ export const ContactForm = ({
     ) {
       emailjs
         .sendForm(
-          `${process.env.EMAILJS_SERVICE_KEY}`,
-          `${process.env.EMAILJS_TEMPLATE_KEY}`,
+          "service_y1eywz9",
+          "template_l7ypyci",
           e.target,
-          `6SqbNtc3wY6pUMJvF`
+          "6SqbNtc3wY6pUMJvF"
         )
         .then(
           (result) => {
