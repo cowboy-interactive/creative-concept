@@ -61,8 +61,6 @@ export const Testimonials = ({
     }
   };
 
-  console.log(showImage);
-
   return (
     <>
       <ImageOverlay>

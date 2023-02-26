@@ -62,8 +62,6 @@ export const Gallery = ({
     }
   };
 
-  console.log(showImage);
-
   return (
     <>
       <OverlayCont overlay={overlay ? "flex" : "none"}>

@@ -7,6 +7,8 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Router from "next/router";
 import { Button } from "components/Button/Button";
+import { themes } from "utils/variables";
+import { useTheme } from "utils/provider";
 
 export const ContactForm = ({
   color = "#333",
@@ -23,6 +25,8 @@ export const ContactForm = ({
   const [wasSent, setWasSent] = useState("");
   const [showMessage, setShowMessage] = useState(false);
 
+  const { theme } = useTheme();
+
   function validateEmail(email) {
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -30,6 +34,7 @@ export const ContactForm = ({
   }
 
   const sendEmail = (e) => {
+    console.log("send")
     e.preventDefault();
     if (
       validateEmail(email) &&
@@ -39,10 +44,10 @@ export const ContactForm = ({
     ) {
       emailjs
         .sendForm(
-          "service_5tubv6h",
-          "template_wgw1itj",
+          process.env.EMAILJS_SERVICE_KEY,
+          process.env.EMAILJS_TEMPLATE_KEY,
           e.target,
-          "ROr9Pf2vE-Asa3fil"
+          process.env.EMAILJS_PUBLIC_KEY
         )
         .then(
           (result) => {
@@ -160,7 +165,7 @@ export const ContactForm = ({
             onChange={(e) => setMessage(e.target.value)}
           />
 
-          <Button>Send</Button>
+          <ButtonUI background={themes[theme].button} type="submit">Send</ButtonUI>
         </FormUI>
       </Cont>
     </>
@@ -245,4 +250,25 @@ const MessageTextUI = styled.div`
   border-radius: 10px;
   background: black;
   color: white;
+`;
+
+const ButtonUI = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 25px;
+  transition: 0.1s ease;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-weight: 600;
+  border: none;;
+  background: ${(props) => props.background}};
+  color: white;
+
+  &:hover {
+    filter: brightness(110%);
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.25);
+  }
 `;
