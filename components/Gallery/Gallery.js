@@ -16,8 +16,8 @@ export const Gallery = ({
   initial = { opacity: 0 },
   whileInView = { opacity: 1 },
   viewport = { once: true },
-  transition = { ease: "easeOut", duration: 1 },
-  links={links}
+  transition = { ease: "easeOut", duration: 0.5 },
+  links = { links },
 }) => {
   const [overlay, setOverlay] = useState(false);
   const [showImage, setShowImage] = useState({
@@ -93,7 +93,7 @@ export const Gallery = ({
               initial={initial}
               whileInView={whileInView}
               viewport={viewport}
-              transition={{ ease: "easeOut", duration: 1, delay: i / 4 }}
+              transition={{ ease: "easeOut", duration: 0.5 }}
             >
               <Img src={item.image} alt={item.head} />
             </Card>

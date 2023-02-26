@@ -29,7 +29,7 @@ export const links = [
   {
     head: "Portfolio",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
+    url: "/portfolio",
     icon: <Tool />,
     target: "_blank",
     image: "/interior-4.jpg",
@@ -37,7 +37,7 @@ export const links = [
   {
     head: "Contact Us",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nec ut viverra eros euismod. Vestibulum, diam suspendiss.",
-    url: "/",
+    url: "/contact",
     icon: <Paperclip />,
     target: "",
     image: "/interior.jpg",

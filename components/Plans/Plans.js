@@ -15,7 +15,7 @@ export const Plans = ({
   initial = { opacity: 0 },
   whileInView = { opacity: 1 },
   viewport = { once: true },
-  transition = { ease: "ease", duration: 1 },
+  transition = { ease: "ease", duration: 0.5 },
 }) => {
   const { theme } = useTheme();
 
@@ -29,7 +29,7 @@ export const Plans = ({
               initial={initial}
               whileInView={whileInView}
               viewport={viewport}
-              transition={{ ease: "linear", duration: 1, delay: i / 4 }}
+              transition={{ ease: "linear", duration: 0.5 }}
               all={all}
               large={large}
               medium={medium}

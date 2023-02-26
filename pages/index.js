@@ -18,6 +18,7 @@ import { Testimonials } from "components/Testimonials/Testimonials";
 import { themes } from "utils/variables";
 import { useTheme } from "utils/provider";
 import { links } from "components/Gallery/home";
+import { Services } from "components/Services/Services";
 const Scene = dynamic(() => import("components/Scene"), { ssr: true });
 
 export default function Home() {
@@ -63,16 +64,37 @@ export default function Home() {
         </Column>
         <Column xl="width: 50%;" sm="align-items: center; width: 100%;">
           <Img
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
             src="/gallery/gallery-9.jpg"
             xl={`position: absolute; width: 500px; right: -200px; z-index: 1; top: -100px; max-width: 700px;`}
             md="position: relative; width: 100%; left: 0; top: 0px; margin: 0 0 20px 0;"
           />
           <Img
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
             src="/gallery/gallery-1.jpg"
             xl="position: absolute; width: 500px; left: 0; top: 200px; max-width: 700px;"
             md="position: relative; width: 100%; left: 0; top: 0px; margin: 0 0 20px 0;"
           />
         </Column>
+      </Section>
+
+      <Section xl="padding: 0 10%; flex-direction: column; align-items: center; text-align: center;">
+        <Column xl="max-width: 450px;">
+          <H2 xl="justify-content: center;">Services</H2>
+          <Text>
+            There’s a package for everyone. Choose the right package for you and
+            let’s go on this journey together!
+          </Text>
+        </Column>
+
+        <Services />
+        <Button href="/contact">Get a Free Quote</Button>
       </Section>
 
       <Section xl="padding: 0 20%; flex-direction: column; align-items: center; text-align: center;">
@@ -102,7 +124,7 @@ export default function Home() {
         </Button>
       </Section>
 
-      <Section
+      {/* <Section
         xl={`padding: 100px 20%; flex-direction: column; align-items: center; text-align: center; background: ${themes[theme].button}`}
         md="padding: 100px 20%;"
         sm="padding: 100px 5%;"
@@ -114,7 +136,7 @@ export default function Home() {
           </Text>
         </Column>
         <Testimonials />
-      </Section>
+      </Section> */}
 
       <Section>
         <ContactForm />

@@ -14,7 +14,7 @@ export const Button = ({
   initial = { opacity: 0 },
   whileInView = { opacity: 1 },
   viewport = { once: true },
-  transition = { ease: "easeOut", duration: 1 },
+  transition = { ease: "easeOut", duration: 0.5 },
   href = "/",
   target,
 }) => {

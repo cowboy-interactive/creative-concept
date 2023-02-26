@@ -75,6 +75,7 @@ export const Navbar = ({
           xl={"margin: 0 0 0 40px;"}
           sm={"display: none"}
           initial={{ opacity: 1 }}
+          href="/contact"
         >
           Contact Us
         </Button>
