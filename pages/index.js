@@ -1,14 +1,10 @@
 import { useState } from "react";
 import { Button } from "components/Button/Button";
-import { Card } from "components/Card/Card";
-import { Container } from "components/Container/Container";
 import { Column } from "components/Container/Column";
 import { Section } from "components/Container/Section";
-import { Grid } from "components/Grid/Grid";
 import { Img } from "components/Img/Img";
 import { H1 } from "components/Text/H1";
 import { H2 } from "components/Text/H2";
-import { H3 } from "components/Text/H3";
 import { Text } from "components/Text/Text";
 import useScrollTop from "hooks/useScrollTop";
 import useWindowSize from "hooks/useWindowSize";

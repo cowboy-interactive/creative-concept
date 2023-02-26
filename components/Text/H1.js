@@ -10,10 +10,10 @@ export const H1 = ({
   md,
   sm,
   xs,
-  initial = {},
-  whileInView = {},
-  viewport = {},
-  transition = {},
+  initial = { opacity: 0 },
+  whileInView = { opacity: 1 },
+  viewport = { once: true },
+  transition = { ease: "easeOut", duration: 1 },
 }) => {
   return (
     <Cont

@@ -71,7 +71,11 @@ export const Navbar = ({
           );
         })}
         <ThemeSwitch />
-        <Button xl={"margin: 0 0 0 40px;"} sm={"display: none"}>
+        <Button
+          xl={"margin: 0 0 0 40px;"}
+          sm={"display: none"}
+          initial={{ opacity: 1 }}
+        >
           Contact Us
         </Button>
       </Container>
