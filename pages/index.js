@@ -84,7 +84,7 @@ export default function Home() {
         </Column>
       </Section>
 
-      <Section xl="padding: 0 10%; flex-direction: column; align-items: center; text-align: center;">
+      <Section xl="padding: 0 20%; flex-direction: column; align-items: center; text-align: center;" lg="padding: 0 10%;">
         <Column xl="max-width: 450px;">
           <H2 xl="justify-content: center;">Services</H2>
           <Text>
@@ -94,19 +94,6 @@ export default function Home() {
         </Column>
 
         <Services />
-        <Button href="/contact">Get a Free Quote</Button>
-      </Section>
-
-      <Section xl="padding: 0 20%; flex-direction: column; align-items: center; text-align: center;">
-        <Column xl="max-width: 450px;">
-          <H2 xl="justify-content: center;">Packages</H2>
-          <Text>
-            There’s a package for everyone. Choose the right package for you and
-            let’s go on this journey together!
-          </Text>
-        </Column>
-
-        <Plans />
         <Button href="/contact">Get a Free Quote</Button>
       </Section>
 
@@ -122,6 +109,19 @@ export default function Home() {
         <Button xl="margin: 60px 0 0 0;" href="/portfolio">
           See More
         </Button>
+      </Section>
+
+      <Section xl="padding: 0 20%; flex-direction: column; align-items: center; text-align: center;">
+        <Column xl="max-width: 450px;">
+          <H2 xl="justify-content: center;">Packages</H2>
+          <Text>
+            There’s a package for everyone. Choose the right package for you and
+            let’s go on this journey together!
+          </Text>
+        </Column>
+
+        <Plans />
+        <Button href="/contact">Get a Free Quote</Button>
       </Section>
 
       {/* <Section
