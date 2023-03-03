@@ -19,6 +19,7 @@ import { themes } from "utils/variables";
 import { useTheme } from "utils/provider";
 import { links } from "components/Gallery/home";
 import { Services } from "components/Services/Services";
+import Head from "next/head";
 const Scene = dynamic(() => import("components/Scene"), { ssr: true });
 
 export default function Home() {
@@ -29,7 +30,7 @@ export default function Home() {
   const { theme } = useTheme();
 
   return (
-    <>
+    <main>
       <Hero>
         <H1 xl="max-width: 600px; text-align: center; margin: 0 0 40px 0;">
           Personalized digital marketing for your business
@@ -148,6 +149,6 @@ export default function Home() {
         <ContactForm />
       </Section>
       <Footer />
-    </>
+    </main>
   );
 }

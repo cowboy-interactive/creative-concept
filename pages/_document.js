@@ -35,14 +35,19 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/icon.png"></link>
           <meta name="theme-color" content="#fff" />
+          <title>
+            Creative Concept Media · Personalized digital marketing for your
+            business
+          </title>
+          <meta
+            property="og:title"
+            content="Creative Concept Media · Personalized digital marketing for your business"
+            key="title"
+          />
           <meta
             name="description"
-            content="Cowboy Interactive · Affordable, subscription based, web design and development for your small business. We build, host and manage your custom website."
+            content="We provide personalized content creation, social media management, and website services for your unique brand. Let’s Connect and Build your Unique Brand Together."
           ></meta>
-          <meta
-            property="og:image"
-            content="https://cowboy-interactive-website.s3.us-west-2.amazonaws.com/og-image-01.png"
-          />
         </Head>
         <body>
           <Main />
