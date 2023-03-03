@@ -186,7 +186,6 @@ const MobileMenuUI = styled.div`
   height: 100vh;
   background: #222;
   color: white;
-  cursor: pointer;
   @media (max-width: ${sizes.sm}) {
     display: flex;
     padding: 0px 5% 0 5%;
@@ -198,6 +197,7 @@ const MobileMenuUI = styled.div`
 
 const MobileUI = styled.div`
   display: none;
+  cursor: pointer;
   @media (max-width: ${sizes.sm}) {
     display: flex;
   }
