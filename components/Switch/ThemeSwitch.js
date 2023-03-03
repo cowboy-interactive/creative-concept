@@ -41,7 +41,7 @@ const Switch = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
-  border: 2px solid ${(props) => props.themes[props.theme].secondary};
+  border: 2px solid white;
 
   ${({ xl }) => xl};
 
@@ -74,6 +74,6 @@ const Toggle = styled.div`
   font-weight: 600;
   transform: ${(props) =>
     props.theme == "default" ? "translate(-5px)" : "translate(25px)"};
-  background: ${(props) => props.themes[props.theme].secondary};
-  color: ${(props) => props.themes[props.theme].primary};
+  background: white;
+  color: #222;
 `;

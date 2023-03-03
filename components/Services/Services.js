@@ -33,8 +33,7 @@ export const Services = ({
             whileInView={whileInView}
             viewport={viewport}
             transition={{ ease: "easeOut", duration: 0.5 }}
-            area={i + 1 === active ? "6fr" : "2fr"}
-            height={i + 1 === active ? "none" : "0px"}
+            height={i + 1 === active ? "none" : "none"}
             onClick={() => i + 1 === active ? setActive(0) : setActive(i + 1)}
           >
             <Column>
@@ -43,11 +42,14 @@ export const Services = ({
                 <H3 xl={"margin: 0 0 0px 0; text-align: left;"}>{item.head}</H3>
               </Container>
 
-              {i + 1 === active && (
+              <Text xl="margin: 20px 0 0 0;" initial={{ opacity: 1 }}>
+                  {item.text}
+                </Text>
+              {/* {i + 1 === active && (
                 <Text xl="margin: 20px 0 0 0;" initial={{ opacity: 1 }}>
                   {item.text}
                 </Text>
-              )}
+              )} */}
             </Column>
           </Card>
         );
@@ -76,7 +78,7 @@ const Cont = styled.div`
 
 const Card = styled(motion.div)`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   border-radius: 15px;
@@ -85,16 +87,16 @@ const Card = styled(motion.div)`
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   padding: 40px;
   max-height: ${({ height }) => height};
-  cursor: pointer;
 
-  &:hover{
-    color: white;
-    background: ${({ highlight }) => highlight};
 
-    .icon{
-      color: white;
-    }
-  }
+  // &:hover{
+  //   color: white;
+  //   background: ${({ highlight }) => highlight};
+
+  //   .icon{
+  //     color: white;
+  //   }
+  // }
 `;
 
 const Column = styled.div`

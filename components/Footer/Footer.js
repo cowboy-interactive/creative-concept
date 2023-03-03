@@ -24,13 +24,15 @@ export const Footer = ({ xl, lg, md, sm }) => {
       <Content>
         <Column>
           <Link href={"/"} xl={"font-size: 20px; font-weight: 500;"}>
-            <Image alt="logo" src="/images/logo.svg" width={200} height={100} />
+            <Image alt="logo" src="/images/logo.svg" width={160} height={100} />
           </Link>
           <Text xl={"color: #fff; max-width: 500px; margin: 40px 0 60px 0"}>
-            Let’s Connect and Build your Brand Together.
+            We provide personalized content creation, social media management,
+            and website services for your unique brand. Let’s Connect and Build
+            your Unique Brand Together.
           </Text>
 
-          <Row>
+          {/* <Row>
             {social.map((item, i) => {
               return (
                 <Icon key={i}>
@@ -40,7 +42,7 @@ export const Footer = ({ xl, lg, md, sm }) => {
                 </Icon>
               );
             })}
-          </Row>
+          </Row> */}
         </Column>
 
         <Column>

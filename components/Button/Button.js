@@ -17,6 +17,7 @@ export const Button = ({
   transition = { ease: "easeOut", duration: 0.5 },
   href = "/",
   target,
+  setShowMenu = () => {},
 }) => {
   const { theme } = useTheme();
   const router = useRouter();
@@ -25,11 +26,15 @@ export const Button = ({
   const handleClick = (e, href) => {
     e.preventDefault();
     if (target == "_blank") {
-      window.open(href, "_blank");
+      window.open(href, "_blank").then(() => {
+        setShowMenu(false);
+      });
       return;
     }
     if (href) {
-      router.push(href);
+      router.push(href).then(() => {
+        setShowMenu(false);
+      });
     }
   };
 

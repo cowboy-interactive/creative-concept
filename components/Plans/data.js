@@ -43,23 +43,19 @@ export const links = [
         icon: <CheckCircle alt="icon" />,
       },
       {
-        head: "Content Creation (Photography and videography. 3 post/wk)",
+        head: "Content Creation (Photography and videography. 4 post/wk)",
         icon: <CheckCircle alt="icon" />,
       },
       {
-        head: "Website creation/design/optimization",
+        head: "Website design, development and search engine optimization",
         icon: <CheckCircle alt="icon" />,
       },
       {
-        head: "SEO",
+        head: "Cost effective promotions that fit within your marketing budget",
         icon: <CheckCircle alt="icon" />,
       },
       {
-        head: "Promotions (sales) that fit within your budget",
-        icon: <CheckCircle alt="icon" />,
-      },
-      {
-        head: "Analytics (monthly)",
+        head: "Monthly Analytics (social media, website) ",
         icon: <CheckCircle alt="icon" />,
       },
     ],
@@ -76,7 +72,7 @@ export const links = [
         icon: <CheckCircle alt="icon" />,
       },
       {
-        head: "Content Creation (Photography and videography. 3-4 post/wk)",
+        head: "Content Creation (Photography and videography. 4 post/wk)",
         icon: <CheckCircle alt="icon" />,
       },
       {

@@ -32,10 +32,12 @@ export default function Home() {
     <>
       <Hero>
         <H1 xl="max-width: 600px; text-align: center; margin: 0 0 40px 0;">
-          Digital Marketing
+          Personalized digital marketing for your business
         </H1>
-        <Text xl="font-weight: 500">
-          Let’s Connect and Build your Brand Together.
+        <Text xl="font-weight: 500; max-width: 600px; text-align: center;">
+          We provide personalized content creation, social media management, and
+          website services for your unique brand. Let’s Connect and Build your
+          Unique Brand Together.
         </Text>
 
         <Button xl="color: white;" href="/contact">
@@ -84,12 +86,16 @@ export default function Home() {
         </Column>
       </Section>
 
-      <Section xl="padding: 0 20%; flex-direction: column; align-items: center; text-align: center;" lg="padding: 0 10%;">
-        <Column xl="max-width: 450px;">
+      <Section
+        xl="padding: 0 20%; flex-direction: column; align-items: center; text-align: center;"
+        lg="padding: 0 10%;"
+      >
+        <Column xl="max-width: 500px; justify-conte0nt: center;">
           <H2 xl="justify-content: center;">Services</H2>
           <Text>
-            There’s a package for everyone. Choose the right package for you and
-            let’s go on this journey together!
+            Offering comprehensive digital solutions to grow your brand. From content creation to
+            web design we've
+            got you covered.
           </Text>
         </Column>
 
