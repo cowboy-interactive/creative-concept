@@ -35,6 +35,10 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/icon.png"></link>
           <meta name="theme-color" content="#fff" />
+          <meta
+            property="og:image"
+            content="https://images.unsplash.com/photo-1661956600684-97d3a4320e45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+          />
           <title>
             Creative Concept Media · Personalized digital marketing for your
             business
