@@ -111,7 +111,11 @@ export const Navbar = ({
                 </>
               );
             })}
-            <Button initial={{ opacity: 1 }} href="/contact" setShowMenu={setShowMenu}>
+            <Button
+              initial={{ opacity: 1 }}
+              href="/contact"
+              setShowMenu={setShowMenu}
+            >
               Contact Us
             </Button>
           </Column>

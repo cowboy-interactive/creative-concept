@@ -37,7 +37,7 @@ export const Services = ({
             onClick={() => i + 1 === active ? setActive(0) : setActive(i + 1)}
           >
             <Column>
-              <Container>
+              <Container xl="align-items: flex-start">
                 <Icon className="icon" color={themes[theme].highlight}>{item.image} </Icon>
                 <H3 xl={"margin: 0 0 0px 0; text-align: left;"}>{item.head}</H3>
               </Container>
