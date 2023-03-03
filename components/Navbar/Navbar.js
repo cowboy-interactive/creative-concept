@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { links } from "./data";
 import { useTheme } from "utils/provider";
 import { sizes, themes } from "utils/variables";
@@ -10,6 +10,7 @@ import { Container } from "components/Container/Container";
 import { Button } from "components/Button/Button";
 import { Img } from "components/Img/Img";
 import useScrollTop from "hooks/useScrollTop";
+import useWindowSize from "hooks/useWindowSize";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { Column } from "components/Container/Column";
@@ -27,10 +28,23 @@ export const Navbar = ({
   transition = {},
 }) => {
   const { theme } = useTheme();
-  const [showMenu, setShowMenu] = useState(true);
+  const [showMenu, setShowMenu] = useState(false);
 
   const scrollTop = useScrollTop();
   const router = useRouter();
+
+  const { width } = useWindowSize();
+
+  function removePxFromString(str) {
+    return Number(str.replace("px", ""));
+  }
+
+  useEffect(() => {
+    console.log(sizes.sm);
+    if (showMenu && width > removePxFromString(sizes.sm)) {
+      setShowMenu(false);
+    }
+  }, [width]);
 
   return (
     <>
