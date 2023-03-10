@@ -20,6 +20,7 @@ import { useTheme } from "utils/provider";
 import { links } from "components/Gallery/home";
 import { Services } from "components/Services/Services";
 import Head from "next/head";
+import { Clients } from "components/Clients/Clients";
 const Scene = dynamic(() => import("components/Scene"), { ssr: true });
 
 export default function Home() {
@@ -104,6 +105,13 @@ export default function Home() {
         <Button href="/contact">Get a Free Quote</Button>
       </Section>
 
+      <Section xl={`padding: 100px 20%; flex-direction: column; align-items: center; text-align: center; background:${themes[theme].button}; color: white;`} md={`padding: 100px 5%;`}>
+        <Column xl="max-width: 450px;">
+          <H2 xl="justify-content: center;   margin: 0 0 40px 0;">Our Clients</H2>
+        </Column>
+        <Clients />
+      </Section>
+
       <Section xl="padding: 0 5%; flex-direction: column; align-items: center; text-align: center;">
         <H2>Portofolio</H2>
         <Text xl="max-width: 400px;">
@@ -118,6 +126,8 @@ export default function Home() {
         </Button>
       </Section>
 
+
+
       <Section xl="padding: 0 20%; flex-direction: column; align-items: center; text-align: center;">
         <Column xl="max-width: 450px;">
           <H2 xl="justify-content: center;">Packages</H2>
@@ -130,6 +140,8 @@ export default function Home() {
         <Plans />
         <Button href="/contact">Get a Free Quote</Button>
       </Section>
+
+
 
       {/* <Section
         xl={`padding: 100px 20%; flex-direction: column; align-items: center; text-align: center; background: ${themes[theme].button}`}

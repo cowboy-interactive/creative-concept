@@ -191,7 +191,7 @@ const ColumnUI = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin: 0 0 60px 0;
+  margin: 0 100px 60px 0;
 `;
 
 const FormUI = styled.form`

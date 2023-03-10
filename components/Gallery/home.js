@@ -27,6 +27,6 @@ export const links = [
   {
     head: "Project Planning",
     name: "interior-2",
-    image: "/gallery/gallery-8.jpg",
+    image: "/gallery/gallery-7.jpg",
   }
 ];
