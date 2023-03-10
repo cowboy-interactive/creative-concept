@@ -108,6 +108,9 @@ export default function Home() {
       <Section xl={`padding: 100px 20%; flex-direction: column; align-items: center; text-align: center; background:${themes[theme].button}; color: white;`} md={`padding: 100px 5%;`}>
         <Column xl="max-width: 450px;">
           <H2 xl="justify-content: center;   margin: 0 0 40px 0;">Our Clients</H2>
+          <Text xl="max-width: 450px;">
+            Here are some of the clients we have worked with, spanning various fields such as content creation, photography, web development, and design.
+          </Text>
         </Column>
         <Clients />
       </Section>
