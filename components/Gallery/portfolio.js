@@ -2,7 +2,7 @@ export const links = [
   {
     head: "Project Planning",
     name: "interior-2",
-    image: "/gallery/gallery-1.jpg",
+    image: "/gallery/gallery-14.jpg",
   },
   {
     head: "Project Planning",
@@ -27,9 +27,8 @@ export const links = [
   {
     head: "Project Planning",
     name: "interior-2",
-    image: "/gallery/gallery-11.jpg",
+    image: "/gallery/gallery-8.jpg",
   },
-
   {
     head: "Project Planning",
     name: "interior-2",
@@ -38,12 +37,12 @@ export const links = [
   {
     head: "Project Planning",
     name: "interior-2",
-    image: "/gallery/gallery-8.jpg",
+    image: "/gallery/gallery-9.jpg",
   },
   {
     head: "Project Planning",
     name: "interior-2",
-    image: "/gallery/gallery-14.jpg",
+    image: "/gallery/gallery-1.jpg",
   },
   {
     head: "Project Planning",
